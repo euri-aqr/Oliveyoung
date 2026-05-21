@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>김유리 · Portfolio — CJ올리브영 발견탭 PM 지원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/[email protected]/dist/web/variable/pretendardvariable-dynamic-subset.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:[email protected],9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+/* ===== TOKENS ===== */
+:root {
+  --bg: #FAFAF7;
+  --paper: #FFFFFF;
+  --soft: #F2F1EC;
+  --tint: #EEF3EC;
+  --warm: #F7F2EA;
+  --dark: #191A17;
+  --ink: #1A1A18;
+  --ink2: #4C4C46;
+  --ink3: #797970;
+  --line: #E4E2DA;
+  --accent: #2F5E3A;
+  --accent-l: #97BC62;
+  --radius: 10px;
+  --shadow: 0 10px 28px rgba(31,37,28,.06);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.78;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 2.2rem; }
+section { padding: 5rem 0; scroll-margin-top: 82px; }
+
+/* Background sections break out of .wrap to full viewport width,
+   then re-establish inner padding to match wrap content alignment */
+section.tint,
+section.warm,
+section.dark {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: calc(50vw - 50% + 2.2rem);
+  padding-right: calc(50vw - 50% + 2.2rem);
+}
+section.tint { background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+section.warm { background: var(--warm); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+section.dark { background: var(--dark); color: #E8E6DE; border-top: 1px solid var(--dark); }
+
+/* ===== STICKY NAV ===== */
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(250,250,247,.95);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-bottom: 1px solid var(--line);
+  z-index: 100;
+  padding: 0.85rem 0;
+}
+.nav-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-name {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+.nav-links {
+  display: flex;
+  gap: 1.1rem;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.nav-links a {
+  color: var(--ink2);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.nav-links a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ===== HERO ===== */
+.hero { padding: 5.4rem 0 4rem; border-bottom: 1px solid var(--line); }
+.hero-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  color: var(--ink3);
+  text-transform: uppercase;
+  margin-bottom: 2.3rem;
+  font-weight: 700;
+}
+.hero-meta span:first-child { color: var(--accent); }
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -1.8px;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+.hero-title em { font-style: italic; color: var(--accent); font-weight: 500; }
+.hero-sub {
+  font-size: 18px;
+  color: var(--ink2);
+  line-height: 1.7;
+  max-width: 720px;
+  margin-bottom: 2.5rem;
+}
+.hero-sub strong { color: var(--ink); font-weight: 700; }
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.quick-cell {
+  padding: 1.35rem 1.1rem;
+  border-right: 1px solid var(--line);
+}
+.quick-cell:last-child { border-right: none; }
+.quick-num {
+  font-family: 'Fraunces', serif;
+  color: var(--accent);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+.quick-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+.quick-desc {
+  font-size: 12px;
+  color: var(--ink3);
+  line-height: 1.55;
+}
+
+/* ===== SECTION HEADERS ===== */
+.s-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+.s-title {
+  font-family: 'Fraunces', serif;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: -0.9px;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  max-width: 760px;
+}
+.s-sub {
+  font-size: 16px;
+  color: var(--ink2);
+  line-height: 1.75;
+  max-width: 720px;
+  margin-bottom: 2.4rem;
+}
+.s-sub strong { color: var(--ink); font-weight: 700; }
+
+p { font-size: 15px; color: var(--ink2); line-height: 1.85; margin-bottom: 1.1rem; }
+strong { color: var(--ink); font-weight: 700; }
+mark {
+  background: linear-gradient(transparent 62%, var(--tint) 62%);
+  padding: 0 2px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ===== CARD PATTERNS ===== */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.55rem;
+}
+.card-accent {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.55rem;
+}
+.card-soft {
+  background: var(--tint);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.55rem;
+}
+.card-dark {
+  background: var(--dark);
+  color: white;
+  border-radius: var(--radius);
+  padding: 1.7rem 1.9rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: var(--tint);
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 0.7rem;
+}
+
+/* ===== GRIDS ===== */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+/* ===== 3-AXIS (Role Interpretation) ===== */
+.axis-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.axis-title {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+  margin-bottom: 0.55rem;
+}
+.axis-desc {
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.65;
+}
+
+/* ===== FUNNEL (6-step) ===== */
+.funnel {
+  display: flex;
+  align-items: stretch;
+  gap: 0.4rem;
+  margin: 2rem 0;
+  flex-wrap: nowrap;
+}
+.funnel-step {
+  flex: 1 1 0;
+  min-width: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--accent);
+  padding: 0.85rem 0.4rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+.funnel-step-num {
+  font-family: 'Fraunces', serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1.5px;
+  margin-bottom: 0.3rem;
+}
+.funnel-step-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.funnel-arrow {
+  flex-shrink: 0;
+  align-self: center;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.summary-quote {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 2rem 0 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 3px solid var(--accent);
+}
+
+/* ===== CAREER TRANSLATION + FIT TABLE ===== */
+.sub-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin: 2.5rem 0 1.25rem;
+}
+.sub-head-num {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+.sub-head-title {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+}
+
+.translate-card-title {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.2px;
+}
+.translate-list { list-style: none; padding: 0; }
+.translate-list li {
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.7;
+  padding: 0.15rem 0 0.15rem 0.85rem;
+  position: relative;
+}
+.translate-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.fit-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.fit-table th {
+  background: var(--accent);
+  color: white;
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+}
+.fit-table td {
+  padding: 1rem 1rem;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--ink2);
+}
+.fit-table td:first-child {
+  width: 22%;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: 'Fraunces', serif;
+}
+.fit-table td:nth-child(2) { width: 38%; color: var(--ink); }
+.fit-table tr:first-child td { border-top: none; }
+
+/* ===== CASE LAYOUT ===== */
+.case-head {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.case-kicker {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+.case-title {
+  font-family: 'Fraunces', serif;
+  font-size: 38px;
+  line-height: 1.18;
+  letter-spacing: -0.9px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.rolebox {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.2rem;
+  align-self: start;
+}
+.rolebox dt {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+}
+.rolebox dt:first-of-type { margin-top: 0; }
+.rolebox dd {
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.55;
+  margin-top: 0.15rem;
+}
+
+/* ===== METRICS STRIP ===== */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 1.5rem 0 2.1rem;
+}
+.metrics-cell {
+  padding: 1.25rem 0.9rem;
+  text-align: center;
+  border-right: 1px solid var(--line);
+}
+.metrics-cell:last-child { border-right: none; }
+.metrics-num {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+  letter-spacing: -0.4px;
+}
+.metrics-label {
+  font-size: 10.5px;
+  color: var(--ink3);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+/* ===== SUB-CASE (Action 1, Action 2 ...) ===== */
+.story {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1.5rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--line);
+}
+.story:first-of-type { border-top: none; padding-top: 0.5rem; }
+.story-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding-top: 0.3rem;
+}
+.story h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  color: var(--ink);
+}
+.story p { font-size: 14.5px; line-height: 1.78; }
+
+/* ===== MAGAZINE TABLE ===== */
+.mag-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.4rem;
+  font-size: 13px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.mag-table td {
+  padding: 0.8rem 1rem;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+  line-height: 1.65;
+}
+.mag-table tr:first-child td { border-top: none; }
+.mag-table tr td:first-child {
+  width: 35%;
+  font-weight: 700;
+  color: var(--ink);
+  font-family: 'Fraunces', serif;
+  font-size: 13.5px;
+}
+.mag-table tr td:nth-child(2) { color: var(--ink2); }
+
+/* ===== FLOW ===== */
+.flow {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+  margin: 1.2rem 0 1.5rem;
+}
+.flow span {
+  flex: 1 1 0;
+  min-width: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.55rem 0.5rem;
+  font-size: 12px;
+  color: var(--ink);
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flow .arrow {
+  flex: 0 0 auto;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  align-self: center;
+}
+
+/* ===== BULLETS ===== */
+.bullets { list-style: none; padding: 0; margin: 0.7rem 0 0; }
+.bullets li {
+  position: relative;
+  padding: 0.3rem 0 0.3rem 1.3rem;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--ink2);
+}
+.bullets li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  color: var(--accent);
+  font-size: 11px;
+}
+.bullets li strong { color: var(--ink); }
+
+/* ===== DATA LOOP (Case 02 - 2 rows) ===== */
+.data-loop {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  margin: 1rem 0 1.4rem;
+}
+.data-loop-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+.flow-grid {
+  display: flex;
+  align-items: stretch;
+  gap: 0.45rem;
+  flex-wrap: nowrap;
+}
+.loop-node {
+  flex: 1 1 0;
+  min-width: 0;
+  background: var(--tint);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.75rem 0.5rem;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loop-node .stage {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--ink3);
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+.loop-arrow {
+  flex-shrink: 0;
+  align-self: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.data-loop-caption {
+  margin-top: 0.95rem;
+  font-size: 12.5px;
+  color: var(--ink2);
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+.data-loop-caption .recycle {
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 0.35rem;
+}
+
+/* ===== PULL QUOTE ===== */
+.pull-quote {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--accent);
+  margin: 1.5rem 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 3px solid var(--accent);
+}
+.pull-quote-cite {
+  display: block;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  color: var(--ink3);
+  letter-spacing: 1.2px;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* ===== TAKEAWAY ===== */
+.takeaway { margin: 2.5rem 0 0; }
+.takeaway h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1.1rem;
+  color: white;
+  letter-spacing: -0.2px;
+}
+.takeaway table { width: 100%; border-collapse: collapse; }
+.takeaway td {
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(255,255,255,0.13);
+  font-size: 13.5px;
+  line-height: 1.6;
+  vertical-align: top;
+  color: rgba(255,255,255,.82);
+}
+.takeaway tr:first-child td { border-top: none; padding-top: 0; }
+.takeaway td:first-child {
+  font-weight: 700;
+  width: 38%;
+  padding-right: 1rem;
+  color: white;
+}
+
+/* ===== BACKGROUND CARDS ===== */
+.bg-card-title {
+  font-family: 'Fraunces', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.7rem;
+  letter-spacing: -0.2px;
+}
+.bg-card-period {
+  font-size: 11px;
+  color: var(--ink3);
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 0.85rem;
+}
+.bg-card p { font-size: 13.5px; line-height: 1.78; margin: 0; }
+
+/* ===== PROPOSAL ===== */
+.loop-flow {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  margin: 1rem 0 2rem;
+}
+.loop-flow-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.signal-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 1.5rem 0 2rem;
+}
+.signal-table th {
+  background: var(--accent);
+  color: white;
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+}
+.signal-table td {
+  padding: 0.9rem 1rem;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.signal-table td:first-child {
+  width: 25%;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: 'Fraunces', serif;
+}
+.signal-table td:nth-child(2) { width: 35%; color: var(--ink); }
+.signal-table td:nth-child(3) { color: var(--ink2); }
+
+/* ===== HYPOTHESES ===== */
+.hypo-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.7rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+.hypo-head {
+  display: grid;
+  grid-template-columns: 50px auto 1fr;
+  gap: 0.8rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.hypo-letter {
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.hypo-stage {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: var(--tint);
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.hypo-title {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+  grid-column: 1 / -1;
+}
+.hypo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.2rem;
+}
+.hypo-axis {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.5rem 0;
+  border-top: 1px dashed var(--line);
+}
+.hypo-axis b {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.hypo-axis span {
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.65;
+}
+
+/* ===== 90-DAY PLAN ===== */
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  margin: 1.5rem 0 2.5rem;
+}
+.plan-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-top: 2px solid var(--accent-l);
+  padding: 1.3rem 1.4rem;
+  border-radius: var(--radius);
+}
+.plan-num {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--accent-l);
+  letter-spacing: -0.4px;
+  margin-bottom: 0.15rem;
+}
+.plan-phase {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+.plan-card ul { list-style: none; padding: 0; }
+.plan-card ul li {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.65;
+  padding: 0.35rem 0 0.35rem 0.85rem;
+  position: relative;
+  border-top: 1px dashed rgba(255,255,255,0.13);
+}
+.plan-card ul li:first-child { border-top: none; }
+.plan-card ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: var(--accent-l);
+  font-size: 9px;
+}
+
+.kpi-box {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+}
+.kpi-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent-l);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.kpi-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  padding: 0.75rem 0;
+  border-top: 1px dashed rgba(255,255,255,0.13);
+  gap: 1rem;
+  align-items: start;
+}
+.kpi-row:first-of-type { border-top: none; padding-top: 0.2rem; }
+.kpi-row b {
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-top: 2px;
+}
+.kpi-row span {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.65;
+}
+
+/* ===== CLOSING ===== */
+.closing { padding: 5.5rem 0 4rem; }
+.closing-statement {
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  color: var(--ink);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.7px;
+  margin-bottom: 2rem;
+  max-width: 720px;
+}
+.closing-statement em { font-style: italic; color: var(--accent); }
+.closing-vision {
+  font-size: 16px;
+  color: var(--ink2);
+  line-height: 1.75;
+  max-width: 660px;
+  padding: 1.25rem 0 0 1.25rem;
+  border-left: 3px solid var(--accent);
+}
+.closing-meta {
+  font-size: 12px;
+  color: var(--ink3);
+  letter-spacing: 1px;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+.closing-meta a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 720px) {
+  .wrap { padding: 0 1.3rem; }
+  .nav-inner { padding: 0 1.3rem; }
+  .nav-links { display: none; }
+  .hero-title { font-size: 40px; }
+  .hero-sub { font-size: 16px; }
+  .s-title { font-size: 28px; }
+  .closing-statement { font-size: 24px; }
+  .case-head { grid-template-columns: 1fr; }
+  .case-title { font-size: 28px; }
+  .quick-grid { grid-template-columns: repeat(2, 1fr); }
+  .quick-cell:nth-child(odd) { border-bottom: 1px solid var(--line); }
+  .quick-cell:nth-child(2) { border-right: none; border-bottom: 1px solid var(--line); }
+  .grid-3 { grid-template-columns: 1fr; }
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+  .metrics-cell:nth-child(odd) { border-bottom: 1px solid var(--line); }
+  .metrics-cell:nth-child(2) { border-right: none; border-bottom: 1px solid var(--line); }
+  .funnel { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 0.4rem; }
+  .funnel-step { flex: 0 0 auto; min-width: 110px; }
+  .story { grid-template-columns: 1fr; gap: 0.3rem; }
+  .flow { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 0.4rem; }
+  .flow span { flex: 0 0 auto; min-width: 105px; }
+  .data-loop, .loop-flow { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 0.4rem; }
+  .flow-grid { min-width: 640px; }
+  .loop-node { font-size: 12px; padding: 0.65rem 0.4rem; }
+  .plan-grid { grid-template-columns: 1fr; }
+  .kpi-row { grid-template-columns: 1fr; gap: 0.25rem; }
+  .hypo-grid { grid-template-columns: 1fr; }
+  .fit-table, .signal-table { font-size: 12.5px; }
+  .fit-table td, .signal-table td { padding: 0.7rem 0.6rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-name">김유리 · Portfolio</div>
+    <div class="nav-links">
+      <a href="#role">Role</a>
+      <a href="#fit">Fit</a>
+      <a href="#case1">Case 01</a>
+      <a href="#case2">Case 02</a>
+      <a href="#bg">Background</a>
+      <a href="#proposal">Proposal</a>
+      <a href="#plan">90-Day</a>
+      <a href="./index.html">이력서 →</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="hero-meta">
+    <span>Portfolio · 2026</span>
+    <span>CJ OliveYoung · Product Manager · Discovery</span>
+  </div>
+  <div class="hero-eyebrow">김유리 · Product Manager</div>
+  <h1 class="hero-title">
+    사용자의 관심을<br>
+    <em>콘텐츠로 포착하고</em><br>
+    데이터로 학습시키는 PM
+  </h1>
+  <p class="hero-sub" style="margin-bottom:0;">
+    데이터 매거진과 데이터 큐레이션 서비스를 0에서 1로 만들었고, 이어서 글로벌 크리에이터 어필리에이트 플랫폼에 탑재된 LLM 기반 AI 어시스턴트를 PM으로 빌딩했습니다. 크리에이터 생태계와 어필리에이트 구조를 서비스 내부에서 인접 학습한 PM으로서, 발견탭의 셔터·매거진·쇼핑 큐레이터가 하나의 루프로 이어지도록 설계하고 싶습니다.
+  </p>
+</header>
+
+<!-- ═══ 01 · ROLE INTERPRETATION ═══ -->
+<section id="role">
+  <div class="s-label">01 · Role Interpretation</div>
+  <h2 class="s-title">Discovery PM은<br>콘텐츠 커머스 루프를 설계하는 역할입니다</h2>
+  <p class="s-sub">JD는 발견탭, 라이브, 셔터, 매거진, 리뷰, 어필리에이트·쇼핑 큐레이터, 데이터 분석을 한 포지션 안에 묶고 있습니다. 모두 사용자가 상품을 만나는 흐름의 단면들입니다.</p>
+
+  <div class="funnel">
+    <div class="funnel-step"><div class="funnel-step-num">01</div><div class="funnel-step-title">발견</div></div>
+    <div class="funnel-arrow">▸</div>
+    <div class="funnel-step"><div class="funnel-step-num">02</div><div class="funnel-step-title">체류</div></div>
+    <div class="funnel-arrow">▸</div>
+    <div class="funnel-step"><div class="funnel-step-num">03</div><div class="funnel-step-title">신뢰</div></div>
+    <div class="funnel-arrow">▸</div>
+    <div class="funnel-step"><div class="funnel-step-num">04</div><div class="funnel-step-title">상품 탐색</div></div>
+    <div class="funnel-arrow">▸</div>
+    <div class="funnel-step"><div class="funnel-step-num">05</div><div class="funnel-step-title">구매</div></div>
+    <div class="funnel-arrow">▸</div>
+    <div class="funnel-step"><div class="funnel-step-num">06</div><div class="funnel-step-title">공유·재방문</div></div>
+  </div>
+
+  <p style="margin-top:2rem;">이 흐름을 움직이는 힘은 세 가지로 정리됩니다.</p>
+
+  <div class="grid-3" style="margin-top:1.25rem;">
+    <div class="card">
+      <div class="axis-label">Content</div>
+      <div class="axis-title">콘텐츠가<br>첫 진입점</div>
+      <div class="axis-desc">셔터·매거진·리뷰·라이브는 고객이 상품을 "검색하기 전" 발견하게 만드는 표면입니다.</div>
+    </div>
+    <div class="card">
+      <div class="axis-label">Curation</div>
+      <div class="axis-title">큐레이션이<br>선택 비용을 줄임</div>
+      <div class="axis-desc">추천 검색어·태그·테마·리뷰 맥락은 많은 상품 중 고를 이유를 만들어 줍니다.</div>
+    </div>
+    <div class="card">
+      <div class="axis-label">Data</div>
+      <div class="axis-title">데이터가<br>다음 노출을 결정</div>
+      <div class="axis-desc">클릭·저장·시청·질문·구매·공유를 신호화해 다음 실험과 운영 우선순위를 정합니다.</div>
+    </div>
+  </div>
+
+  <p class="summary-quote">
+    저는 이 세 가지의 사이에서 <strong>발견 → 탐색 → 전환</strong>을 설계하는 일을 해 왔습니다.
+  </p>
+</section>
+
+<!-- ═══ 02 · CAREER & FIT ═══ -->
+<section id="fit" class="tint">
+  <div class="s-label">02 · Career &amp; JD Fit</div>
+  <h2 class="s-title">제 경력을<br>JD 언어로 옮겨 봤습니다</h2>
+  <p class="s-sub">제 경력은 세 갈래로 흘러왔고, JD가 요구하는 일과 한 줄 한 줄 닿는 지점이 있습니다.</p>
+
+  <div class="sub-head">
+    <span class="sub-head-num">Ⅰ</span>
+    <span class="sub-head-title">세 갈래의 경력</span>
+  </div>
+
+  <div class="grid-3">
+    <div class="card">
+      <span class="tag">AI · Data PM</span>
+      <div class="translate-card-title">AI 어시스턴트 + 데이터 플랫폼</div>
+      <ul class="translate-list">
+        <li>LLM 챗봇 0→1 빌딩</li>
+        <li>지식 베이스·페르소나 설계</li>
+        <li>지표 정의·로그 분석</li>
+        <li>응답 정확도 65%→88%</li>
+        <li>다직군 7인 팀 리딩</li>
+        <li>8개 부서 협업 조율</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Editor</span>
+      <div class="translate-card-title">데이터 매거진·큐레이션</div>
+      <ul class="translate-list">
+        <li>매거진 풀사이클 운영</li>
+        <li>데이터 큐레이션 서비스 화면 기획</li>
+        <li>월간지 3종 1인 운영</li>
+        <li>인터뷰 누적 → 상품 기획 루프</li>
+        <li>편집 시각의 정보 아키텍처</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">PR · Community</span>
+      <div class="translate-card-title">국제 콘텐츠 행사 PD</div>
+      <ul class="translate-list">
+        <li>SNS 채널 운영·연구</li>
+        <li>축제 데일리 매일 발행</li>
+        <li>관객·작가 인터뷰 콘텐츠</li>
+        <li>이벤트 IP 기획</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sub-head">
+    <span class="sub-head-num">Ⅱ</span>
+    <span class="sub-head-title">JD 요구와 닿는 지점</span>
+  </div>
+
+  <table class="fit-table">
+    <thead>
+      <tr><th>JD 요구</th><th>제가 해 온 일</th><th>발견탭에서 닿는 지점</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>발견탭·매거진·리뷰</td>
+        <td>사내 데이터 매거진 풀사이클 발행 운영, 5개 섹션 설계, 분석 보고서 큐레이션 서비스 화면 기획</td>
+        <td>매거진·리뷰의 운영 리듬과 정보 구조 설계</td>
+      </tr>
+      <tr>
+        <td>셔터·SNS·커뮤니티</td>
+        <td>국제 콘텐츠 행사 SNS 채널 운영 3년, 축제 데일리 발행, 작가·관람객 인터뷰 콘텐츠 운영</td>
+        <td>창작자·소비자 양쪽의 행동 신호 이해와 콘텐츠 IP 기획</td>
+      </tr>
+      <tr>
+        <td>어필리에이트·쇼핑 큐레이터</td>
+        <td>글로벌 크리에이터 어필리에이트 플랫폼에 탑재된 AI 어시스턴트를 PM으로 빌딩. 크리에이터 가입·자격 검증·고유 코드·수익 분배·캠페인 운영 등 어필리에이트 운영 흐름을 서비스 내부에서 인접 학습</td>
+        <td>쇼핑 큐레이터의 가입·콘텐츠 생산·수익 정산 루프 설계에 직접 적용 가능</td>
+      </tr>
+      <tr>
+        <td>정량·정성 데이터 분석</td>
+        <td>AI 어시스턴트에서 정확도·해결률·Dead Ends 등 지표 정의, 15주 대화 로그 분석으로 정확도 65%→88%</td>
+        <td>콘텐츠 노출·클릭·저장·시청·PDP 진입·구매·공유 로그를 운영 개선 루프로 전환</td>
+      </tr>
+      <tr>
+        <td>상위 기획·상세 설계</td>
+        <td>Confluence 상위 기획안, 8개 부서 stakeholder 설득 피칭, 사용자·시스템 플로우, 지식 베이스 구조 설계</td>
+        <td>전략 보고부터 화면·정책·운영·QA까지 끊기지 않는 PM 실행</td>
+      </tr>
+      <tr>
+        <td>프로젝트 관리</td>
+        <td>Jira·Confluence 5년+ 상시 활용, Figma 기반 화면 기획·프로토타입, Slack 다직군 협업. 7인 팀 + 8개 부서 조율 구조 운영, E2E 릴리즈 사이클 정착</td>
+        <td>빠르게 움직이는 실험을 일정·범위·품질·회고 리듬으로 관리</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══ 03 · CASE STUDY 01 ═══ -->
+<section id="case1">
+  <div class="case-head">
+    <div>
+      <div class="case-kicker">03 · Case Study 01 · Content &amp; Curation</div>
+      <h2 class="case-title">데이터를 읽을 수 있는<br>콘텐츠로 번역하다</h2>
+      <p class="s-sub" style="margin-bottom:0;">조직 내부에 흩어져 있던 데이터 자료를 월간 데이터 매거진과 데이터 큐레이션 서비스로 묶어 발행한 0→1 프로젝트입니다.</p>
+    </div>
+    <dl class="rolebox">
+      <dt>Role</dt><dd>PM</dd>
+      <dt>Period</dt><dd>2021 — 2024</dd>
+      <dt>Scope</dt><dd>콘셉트·섹션·운영 프로세스·화면 단위 설계</dd>
+      <dt>Output</dt><dd>사내 데이터 매거진 풀사이클 운영, 큐레이션 메인·검색 화면 기획</dd>
+    </dl>
+  </div>
+
+  <div class="metrics" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="metrics-cell"><div class="metrics-num">2개</div><div class="metrics-label">0→1 서비스</div></div>
+    <div class="metrics-cell"><div class="metrics-num">5</div><div class="metrics-label">매거진 섹션</div></div>
+    <div class="metrics-cell"><div class="metrics-num">2층</div><div class="metrics-label">콘텐츠+검색 IA</div></div>
+  </div>
+
+  <div class="story">
+    <div class="story-label">Problem</div>
+    <div>
+      <h3>"데이터 드리븐 조직"은<br>선언만으로 작동하지 않았습니다</h3>
+      <p>구성원들은 데이터를 알아야 한다는 필요성은 느꼈지만, 기본 용어부터 어려워했고 분석 보고서는 여러 공간에 흩어져 있었습니다. 대시보드나 교육 이전에 <mark>읽고 싶은 콘텐츠 형태로 데이터 접근성을 높이는 것</mark>이 먼저라고 판단했습니다.</p>
+    </div>
+  </div>
+
+  <div class="story">
+    <div class="story-label">Action 1 · Magazine</div>
+    <div>
+      <h3>매거진을 제품처럼 설계했습니다</h3>
+      <p>콘셉트, 섹션 구성, 운영 프로세스, 발행 주기를 하나의 서비스 시스템으로 구조화했습니다.</p>
+      <table class="mag-table">
+        <tr><td>용어 사전</td><td>매월 10개 내외의 데이터 기본 용어를 눈높이에 맞게 설명</td></tr>
+        <tr><td>도서 요약</td><td>추천 도서를 에디터가 읽고 요약·리뷰하는 "부탁하면 읽어드립니다" 콘셉트</td></tr>
+        <tr><td>보고서 큐레이션</td><td>시의성 있는 이슈와 분석 보고서를 연결해 큐레이션</td></tr>
+        <tr><td>협업 사례 인터뷰</td><td>부서 간 우수 협업 사례와 데이터 활용 사례 인터뷰</td></tr>
+        <tr><td>협업 가이드</td><td>데이터 조직과의 협업 가이드를 콘텐츠로 재편집</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="story">
+    <div class="story-label">Action 2 · Curation IA</div>
+    <div>
+      <h3>보고서를 "찾을 수 있는 서비스"로 바꿨습니다</h3>
+      <p>사내 공지·런칭·타운미팅에서 키워드를 추출하고, 관련 분석 보고서를 찾아 테마 큐레이션으로 묶는 프로세스를 설계했습니다. 메인 화면에는 추천 검색어, 추천 태그, 월 1회 테마 큐레이션, 정기·팀별 보고서 분류단을 배치했고, 검색 결과 화면은 태그 필터와 카드형 결과로 구성했습니다.</p>
+      <div class="flow">
+        <span>사내 이슈</span><span class="arrow">→</span>
+        <span>키워드 추출</span><span class="arrow">→</span>
+        <span>보고서 탐색</span><span class="arrow">→</span>
+        <span>테마 선정</span><span class="arrow">→</span>
+        <span>추천 아티클</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="story">
+    <div class="story-label">Result &amp; Learning</div>
+    <div>
+      <h3>좋은 콘텐츠만으로는 부족했습니다</h3>
+      <div class="pull-quote">
+        "친절하고 친근한 어투로 눈높이에 맞는 아티클을 제공해 줘서 좋았다. 데이터 관련 소통에서 느끼던 답답함이 일정 부분 해소되었다."
+        <span class="pull-quote-cite">— 구성원 피드백</span>
+      </div>
+      <p>매거진은 발행되어 구성원 반응을 얻었지만, 조직 개편과 리소스 부족으로 중단되었습니다. 편집위원회 3인 + 편집부 3인 체계를 설계해 두었지만 실제로는 그만큼의 인력이 필요한 일을 혼자 떠안게 되었던 것이 가장 큰 이유였습니다. 콘텐츠 품질을 지키는 것과 지속 가능한 운영 구조를 만드는 것은 다른 문제라는 것을 이때 배웠고, 이후 다음 프로젝트에서는 처음부터 팀 구조와 릴리즈 리듬을 함께 설계했습니다.</p>
+    </div>
+  </div>
+
+  <div class="card-dark takeaway">
+    <h3>발견탭에 연결되는 지점</h3>
+    <table>
+      <tr><td>매거진·리뷰</td><td>전문 정보를 사용자의 언어로 번역하고, 섹션·발행 주기·운영 리듬으로 유지하는 경험</td></tr>
+      <tr><td>큐레이션</td><td>시의적 이슈를 키워드·태그·추천 콘텐츠로 바꾸는 프로세스와 화면 단위 설계 경험</td></tr>
+      <tr><td>운영 확장성</td><td>1인 운영의 한계를 학습했고, 반복 가능한 협업 구조를 다음 프로젝트에 적용</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ 04 · CASE STUDY 02 ═══ -->
+<section id="case2" class="tint">
+  <div class="case-head">
+    <div>
+      <div class="case-kicker">04 · Case Study 02 · AI &amp; Data Product</div>
+      <h2 class="case-title">크리에이터 어필리에이트 플랫폼의<br>AI 어시스턴트를 0에서 1로</h2>
+      <p class="s-sub" style="margin-bottom:0;">글로벌 크리에이터 어필리에이트 플랫폼에 탑재된 LLM 기반 AI 어시스턴트. 크리에이터의 가입·자격·코드·수익 관련 반복 문의를 AI가 해결하고, 그 대화 로그를 제품 개선 데이터로 전환한 사례입니다.</p>
+    </div>
+    <dl class="rolebox">
+      <dt>Role</dt><dd>PM</dd>
+      <dt>Period</dt><dd>2025 — 현재</dd>
+      <dt>Platform</dt><dd>글로벌 크리에이터 어필리에이트 플랫폼</dd>
+      <dt>Scope</dt><dd>문제 발견·피칭·벤더 선정·플랫폼 탑재·지식 베이스·로그 분석</dd>
+      <dt>Output</dt><dd>응답 정확도 65→88%, 다직군 7인 협업 구조 운영</dd>
+    </dl>
+  </div>
+
+  <div class="metrics">
+    <div class="metrics-cell"><div class="metrics-num">65→88<span style="font-size:14px">%</span></div><div class="metrics-label">응답 정확도</div></div>
+    <div class="metrics-cell"><div class="metrics-num">95%</div><div class="metrics-label">응답 일관성</div></div>
+    <div class="metrics-cell"><div class="metrics-num">100+</div><div class="metrics-label">지식 베이스</div></div>
+    <div class="metrics-cell"><div class="metrics-num">15주</div><div class="metrics-label">로그 분석</div></div>
+  </div>
+
+  <div class="story">
+    <div class="story-label">Discovery</div>
+    <div>
+      <h3>크리에이터에게는<br>안내자가 필요했습니다</h3>
+      <p>탑재 대상은 자사의 <strong>글로벌 크리에이터 어필리에이트 플랫폼</strong>이었습니다. 콘텐츠 크리에이터·스트리머·아티스트가 고유 코드를 발급받고, 팔로워가 해당 코드로 자사 스토어에서 구매 시 크리에이터가 커미션을 분배받는 구조입니다. 여러 자사 게임 IP의 글로벌 마케팅을 크리에이터 네트워크 기반으로 전개하는 플랫폼입니다.</p>
+      <p>운영 데이터와 CS 흐름을 보며 가입 자격·코드 발급·수익 정산 같은 어필리에이트 운영 영역에서 반복 문의가 축적되는 지점을 발견했습니다. 위에서 지시받은 과제가 아니라, 플랫폼 전체의 병목을 보며 직접 문제를 정의하고 제안한 프로젝트입니다.</p>
+    </div>
+  </div>
+
+  <div class="story">
+    <div class="story-label">Affiliate Context</div>
+    <div>
+      <h3>어필리에이트 구조를<br>서비스 내부에서 학습했습니다</h3>
+      <p>크리에이터 어시스턴트를 만들기 위해 이 플랫폼의 어필리에이트 구조 전반을 학습하고 페르소나·지식 베이스에 반영했습니다.</p>
+      <ul class="bullets">
+        <li><strong>크리에이터 등급:</strong> 수동 승인 등급과 자동 승인 등급 2-tier 구조. 등급별 운영 정책 차별화</li>
+        <li><strong>가입·코드·정산:</strong> 소셜 채널 연동, 고유 코드 발급, 글로벌 정산 흐름</li>
+        <li><strong>캠페인 운영:</strong> 금전적·비금전적 캠페인 운영, 게임별 캠페인 차별화</li>
+        <li><strong>글로벌 다국가 운영:</strong> 다국어 응대, 제재국 제외 글로벌</li>
+      </ul>
+      <p style="margin-top:1rem;">크리에이터의 가장 큰 반복 문의가 가입·자격·코드·정산이었기 때문에, AI 어시스턴트의 지식 베이스는 이 어필리에이트 구조를 정확히 반영해야 했습니다. <mark>이 도메인 지식은 올리브영 쇼핑 큐레이터(어필리에이트) 운영 흐름과 구조적으로 같은 결입니다.</mark></p>
+    </div>
+  </div>
+
+  <div class="story">
+    <div class="story-label">Strategy</div>
+    <div>
+      <h3>관련 부서를 설득해<br>프로젝트 합의를 만들었습니다</h3>
+      <p>채택 프레임워크 → AI 어시스턴트 정체성 → 페르소나 → 경쟁 솔루션 → 사용자·시스템 플로우 → KPI 정의 순서로 상위 기획을 구조화했습니다. 초기 내부 사용자 플로우가 무산되자, 대외 사용자 문제로 초점을 재정의하고 SaaS 선정과 새 로드맵을 합의했습니다.</p>
+      <div class="flow">
+        <span>문제 발견</span><span class="arrow">→</span>
+        <span>다부서 피칭</span><span class="arrow">→</span>
+        <span>초기 가설 검증</span><span class="arrow">→</span>
+        <span>피벗 판단</span><span class="arrow">→</span>
+        <span>SaaS 선정</span><span class="arrow">→</span>
+        <span>릴리즈</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="story">
+    <div class="story-label">Data Loop</div>
+    <div>
+      <h3>대화 로그를<br>품질 개선 루프로 전환했습니다</h3>
+
+      <div class="data-loop">
+        <div class="data-loop-label">Quality Loop</div>
+        <div class="flow-grid">
+          <div class="loop-node"><span class="stage">입력</span>FAQ·정책 문서</div>
+          <span class="loop-arrow">→</span>
+          <div class="loop-node"><span class="stage">운영</span>지식 베이스</div>
+          <span class="loop-arrow">→</span>
+          <div class="loop-node"><span class="stage">관찰</span>대화 로그</div>
+          <span class="loop-arrow">→</span>
+          <div class="loop-node"><span class="stage">분석</span>오답 패턴</div>
+          <span class="loop-arrow">→</span>
+          <div class="loop-node"><span class="stage">개선</span>문서 최적화</div>
+          <span class="loop-arrow">→</span>
+          <div class="loop-node"><span class="stage">결과</span>정확도 개선</div>
+        </div>
+        <div class="data-loop-caption"><span class="recycle">↺</span>다음 릴리즈에 반영되어 다시 입력 단계로 순환</div>
+      </div>
+
+      <ul class="bullets">
+        <li><strong>지표 정의:</strong> 응답 정확도, 해결률, Dead Ends 비율, 응답 일관성을 PM이 직접 정의</li>
+        <li><strong>분석 단위:</strong> 미응답 질문, 오답 패턴, 문서 누락·중복, 사용자 세그먼트별 맥락</li>
+        <li><strong>개선 방식:</strong> RAG + 핵심 FAQ 사전 정의 병행, 문서 구조 재정렬, 커스텀 위젯·세그먼트 플로우</li>
+      </ul>
+
+      <p style="margin-top:1.5rem;"><mark>발견탭에서도 클릭·시청·저장·리뷰·구매·공유 로그를 같은 방식으로 품질 개선 루프에 연결할 수 있다고 봅니다.</mark></p>
+    </div>
+  </div>
+
+  <div class="story">
+    <div class="story-label">Execution</div>
+    <div>
+      <h3>도구보다 중요한 것은<br>반복 가능한 리듬이었습니다</h3>
+      <p>초기 2인에서 FE·BE·디자인·QA·DA가 참여하는 7인 협업 구조로 확장했고, 현재 운영 버전 v0.5에 이르기까지 정기 릴리즈 사이클을 정착시켰습니다. 요구사항·스펙·QA 이슈·회고를 Jira와 Confluence에 남기며 같은 시간에 같은 의사결정이 일어나는 리듬을 만드는 일이 도구를 선택하는 일보다 더 어려웠습니다. 지금은 단순 FAQ 챗봇을 넘어 사용자 맥락을 이해하고 선제적으로 돕는 <strong>Proactive AI</strong>로의 전환을 추진하고 있습니다.</p>
+    </div>
+  </div>
+
+  <div class="card-dark takeaway">
+    <h3>발견탭에 연결되는 지점</h3>
+    <table>
+      <tr><td>어필리에이트 도메인</td><td>이 플랫폼을 통해 크리에이터 가입·자격·코드·수익 분배·캠페인 운영 등 어필리에이트 구조를 서비스 내부에서 인접 학습. 쇼핑 큐레이터 운영에 직접 적용 가능</td></tr>
+      <tr><td>지표 운영</td><td>콘텐츠 CTR·PDP 진입률·저장·공유율·큐레이터 전환율 같은 지표도 동일하게 정의·관찰·개선 가능</td></tr>
+      <tr><td>로그 기반 분석</td><td>대화 로그의 미응답·오답 패턴 분석을 콘텐츠 소비 로그의 이탈·클릭·탐색 패턴 분석으로 전환 가능</td></tr>
+      <tr><td>프로젝트 관리</td><td>실험 가설·개발 범위·운영 정책·QA·회고를 하나의 릴리즈 리듬으로 묶는 역량</td></tr>
+      <tr><td>변화 대응</td><td>초기 가설 무산 시 근거 기반 합의를 이끌고 새 로드맵 수립</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ 05 · BACKGROUND ═══ -->
+<section id="bg" class="warm">
+  <div class="s-label">05 · Background</div>
+  <h2 class="s-title">콘텐츠 생산 현장에서<br>구조를 만들어 온 시간</h2>
+  <p class="s-sub">매거진을 만들 수 있었던 것도, AI 챗봇의 페르소나를 설계할 수 있었던 것도, 그 이전에 콘텐츠 생산과 소비의 현장에서 구조를 만들어 온 시간이 있었기 때문입니다.</p>
+
+  <div class="grid-3">
+    <div class="card">
+      <span class="tag">Editorial</span>
+      <div class="bg-card-title">정기간행물 3종 1인 풀사이클 운영</div>
+      <div class="bg-card-period">금성출판사 · 2014–2017</div>
+      <p>어린이·교육 정기간행물 3종을 혼자 기획·취재·기사 작성·발행했습니다. 매월 누적되는 인터뷰 결과를 부서의 다른 상품 기획에 반영하는 루프를 만들어, 단순 발행을 사용자 인사이트가 다음 상품으로 흐르는 데이터 사이클로 운영했습니다.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Community</span>
+      <div class="bg-card-title">국제 콘텐츠 축제 PD</div>
+      <div class="bg-card-period">한국만화영상진흥원 · 2011–2013</div>
+      <p>SNS 채널 운영, 축제 데일리 발행, 창작자·관람객 인터뷰 콘텐츠 운영. 참여형 콘텐츠 경험을 3년간 설계했습니다.</p>
+    </div>
+    <div class="card">
+      <span class="tag">User</span>
+      <div class="bg-card-title">콘텐츠 플랫폼 헤비 유저</div>
+      <div class="bg-card-period">15년+</div>
+      <p>여러 콘텐츠 플랫폼을 초기부터 결제 유저로 사용. 발견·결제·소비·재방문 사용자 경험을 서비스 내부에서 관찰해 왔습니다.</p>
+    </div>
+  </div>
+
+  <p class="summary-quote">
+    "감"이 아니라 <strong>"체계"</strong>로 콘텐츠를 만드는 습관은 월간지 3종을 1인 운영하며 만들어졌습니다.
+  </p>
+</section>
+
+<!-- ═══ 06 · PROPOSAL ═══ -->
+<section id="proposal">
+  <div class="s-label">06 · OliveYoung Discovery Loop</div>
+  <h2 class="s-title">발견탭의 다음 기회는<br>콘텐츠 참여 신호를 커머스 루프로 연결하는 일이라고 봅니다</h2>
+  <p class="s-sub">외부 공개 자료와 사용자 관찰을 바탕으로 정리한 가설들입니다. 실제 적용 전에는 내부 지표·운영 정책과 맞춰 보아야 합니다.</p>
+
+  <div class="loop-flow">
+    <div class="loop-flow-label">Discovery Loop</div>
+    <div class="flow-grid">
+      <div class="loop-node"><span class="stage">01 · Reach</span>셔터·매거진<br>콘텐츠 노출</div>
+      <span class="loop-arrow">→</span>
+      <div class="loop-node"><span class="stage">02 · Engage</span>클릭·시청·저장<br>관심 신호</div>
+      <span class="loop-arrow">→</span>
+      <div class="loop-node"><span class="stage">03 · Trust</span>리뷰·라이브<br>신뢰 형성</div>
+      <span class="loop-arrow">→</span>
+      <div class="loop-node"><span class="stage">04 · Convert</span>PDP·큐레이터<br>전환</div>
+      <span class="loop-arrow">→</span>
+      <div class="loop-node"><span class="stage">05 · Learn</span>구매·공유<br>데이터 학습</div>
+    </div>
+  </div>
+
+  <div class="sub-head">
+    <span class="sub-head-num">Ⅰ</span>
+    <span class="sub-head-title">사용자 신호를 다음 액션으로 옮긴다면</span>
+  </div>
+
+  <table class="signal-table">
+    <thead>
+      <tr><th>신호</th><th>해석</th><th>다음 액션 후보</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>상품 태그 클릭</td>
+        <td>콘텐츠에서 상품 관심으로 넘어간 순간</td>
+        <td>동일 상품의 리뷰·셔터·라이브 클립 모아보기</td>
+      </tr>
+      <tr>
+        <td>저장·공유</td>
+        <td>구매 전 탐색 또는 타인 추천 의도</td>
+        <td>큐레이터 링크 생성 CTA, 추천 콘텐츠 템플릿 제공</td>
+      </tr>
+      <tr>
+        <td>라이브 클립 시청</td>
+        <td>사용법·루틴·전문가 신뢰에 반응하는 단계</td>
+        <td>PDP 내 관련 루틴 콘텐츠 재노출</td>
+      </tr>
+      <tr>
+        <td>리뷰 탐색</td>
+        <td>검증·비교 단계</td>
+        <td>리뷰 요약, 피부고민·카테고리 태그 정렬</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-head">
+    <span class="sub-head-num">Ⅱ</span>
+    <span class="sub-head-title">발견 루프 단계별 가설</span>
+  </div>
+
+  <!-- HYPO A -->
+  <div class="hypo-card">
+    <div class="hypo-head">
+      <span class="hypo-letter">A</span>
+      <span class="hypo-stage">Reach</span>
+      <span style="font-size:0;"></span>
+      <div class="hypo-title">첫 방문자에게는 "인기 피드"보다 "관심사 기반 입문 피드"가 더 작동할 것</div>
+    </div>
+    <div class="hypo-grid">
+      <div class="hypo-axis">
+        <b>Hypothesis</b>
+        <span>피부 고민·관심 카테고리 기반 첫 5개 카드가 상품 태그 CTR을 높일 것</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Experiment</b>
+        <span>온보딩 2~3문항으로 관심사 추정 후 개인화 피드와 인기 피드 비교</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Metrics</b>
+        <span>상품 태그 CTR, 2-depth 진입률, 첫 세션 체류시간</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Guardrail</b>
+        <span>온보딩 이탈률, 반복 노출 피로도, 신규 유저 전환 저하</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HYPO B -->
+  <div class="hypo-card">
+    <div class="hypo-head">
+      <span class="hypo-letter">B</span>
+      <span class="hypo-stage">Explore</span>
+      <span style="font-size:0;"></span>
+      <div class="hypo-title">상품 태그 클릭 이후에는 "이탈"이 아니라 "콘텐츠 이어보기"가 필요할 것</div>
+    </div>
+    <div class="hypo-grid">
+      <div class="hypo-axis">
+        <b>Hypothesis</b>
+        <span>PDP에서 같은 상품의 셔터·리뷰·라이브 클립을 모아주면 탐색 지속률이 높아질 것</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Experiment</b>
+        <span>"이 상품 콘텐츠 모아보기" 모듈 A/B 테스트</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Metrics</b>
+        <span>PDP 체류, 장바구니 전환, 리뷰·콘텐츠 재진입률</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Guardrail</b>
+        <span>관련성 낮은 콘텐츠 노출, PDP 핵심 정보 가림, 페이지 로딩 지연</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HYPO C -->
+  <div class="hypo-card">
+    <div class="hypo-head">
+      <span class="hypo-letter">C</span>
+      <span class="hypo-stage">Convert</span>
+      <span style="font-size:0;"></span>
+      <div class="hypo-title">큐레이터 전환은 "수익 안내"보다 "콘텐츠 템플릿"이 더 효과적일 것</div>
+    </div>
+    <div class="hypo-grid">
+      <div class="hypo-axis">
+        <b>Hypothesis</b>
+        <span>사내 크리에이터 플랫폼에서 신규 크리에이터의 첫 콘텐츠 진입 패턴을 보면, 코드 발급 후 첫 콘텐츠 제작·공유까지의 시간이 가장 큰 병목이었습니다. 쇼핑 큐레이터도 수익률보다 "무엇을 어떻게 써야 하는지"에서 막힐 가능성이 높습니다.</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Experiment</b>
+        <span>카테고리별 추천 문안·해시태그·이미지 구조 템플릿 제공군과 기존군 비교</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Metrics</b>
+        <span>링크 생성률, 첫 공유율, 링크 클릭률, 구매 전환율</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Guardrail</b>
+        <span>과장 표현, 저품질 추천, 브랜드 가이드 위반</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HYPO D -->
+  <div class="hypo-card">
+    <div class="hypo-head">
+      <span class="hypo-letter">D</span>
+      <span class="hypo-stage">Retain</span>
+      <span style="font-size:0;"></span>
+      <div class="hypo-title">라이브는 방송 중에만이 아니라 "방송 후 재순환"되어야 더 오래 작동할 것</div>
+    </div>
+    <div class="hypo-grid">
+      <div class="hypo-axis">
+        <b>Hypothesis</b>
+        <span>라이브 핵심 장면을 짧은 클립으로 재가공해 셔터·PDP에 재배치하면 비시청자에게도 신뢰 맥락을 전달할 것</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Experiment</b>
+        <span>방송 종료 후 24시간 내 PDP·셔터 피드에 핵심 클립 노출</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Metrics</b>
+        <span>클립 시청 완료율, PDP 전환, 재방문율, 브랜드 팔로우</span>
+      </div>
+      <div class="hypo-axis">
+        <b>Guardrail</b>
+        <span>실시간 매력 저하, 라이브 본방 시청률 감소, 클립 품질 편차</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 07 · 90-DAY PLAN ═══ -->
+<section id="plan" class="dark">
+  <div class="s-label" style="color:var(--accent-l);">07 · 90-Day Plan</div>
+  <h2 class="s-title" style="color:white;">처음 90일은<br>이해 → 실험 → 운영화로 움직이고 싶습니다</h2>
+  <p style="font-size:16px; color:rgba(255,255,255,0.78); line-height:1.7; margin-bottom:2.5rem; max-width:720px;">
+    빠르게 상황을 파악하고, 작게 검증한 뒤, 성과가 나온 실험을 운영 정책과 템플릿으로 고정하는 방식으로 일하고 싶습니다.
+  </p>
+
+  <div class="plan-grid">
+    <div class="plan-card">
+      <div class="plan-num">30D</div>
+      <div class="plan-phase">Understand</div>
+      <ul>
+        <li>발견탭·셔터·매거진·리뷰·라이브·큐레이터 현황 지표 파악</li>
+        <li>진입·체류·클릭·저장·구매·공유 퍼널 재정의</li>
+        <li>운영 정책·승인 프로세스·콘텐츠 생산 리드타임 파악</li>
+      </ul>
+    </div>
+    <div class="plan-card">
+      <div class="plan-num">60D</div>
+      <div class="plan-phase">Experiment</div>
+      <ul>
+        <li>관심사 피드·PDP 콘텐츠 모아보기·큐레이터 템플릿 중 1~2개 실험 설계</li>
+        <li>성공 기준과 가드레일 지표 선합의</li>
+        <li>Jira·Confluence 기반 실험 문서 템플릿 정리</li>
+      </ul>
+    </div>
+    <div class="plan-card">
+      <div class="plan-num">90D</div>
+      <div class="plan-phase">Systemize</div>
+      <ul>
+        <li>성과가 확인된 실험을 운영 정책·대시보드·회고 리듬으로 고정</li>
+        <li>크리에이터·큐레이터 운영 부담을 줄이는 도구화 과제 도출</li>
+        <li>다음 분기 Discovery Loop 로드맵 제안</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="kpi-box">
+    <div class="kpi-label">핵심 KPI 후보</div>
+    <div class="kpi-row">
+      <b>콘텐츠</b>
+      <span>노출 대비 클릭률, 시청·읽기 완료율, 저장·공유율, 댓글·반응률</span>
+    </div>
+    <div class="kpi-row">
+      <b>커머스</b>
+      <span>상품 상세 진입률, 장바구니·구매 전환율, 큐레이터 링크 생성·클릭·구매율</span>
+    </div>
+    <div class="kpi-row">
+      <b>운영</b>
+      <span>콘텐츠 생산 리드타임, 큐레이션 승인 SLA, 재사용 가능한 실험 템플릿 수</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CLOSING ═══ -->
+<div class="closing">
+  <div class="closing-statement">
+    저는 콘텐츠를<br>
+    <em>발견 가능한 구조</em>로 만들고,<br>
+    그 반응을 데이터로<br>
+    학습시키는 PM입니다.
+  </div>
+  <div class="closing-vision">
+    발견탭의 다음 과제는 좋은 콘텐츠를 만드는 것을 넘어, 콘텐츠가 상품 탐색과 구매 전환, 다시 콘텐츠 생산으로 이어지는 루프를 설계하는 일이라고 생각합니다.
+  </div>
+  <div class="closing-meta">
+    © 2026 김유리 · Product Manager · <a href="./index.html">이력서 보기</a>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
